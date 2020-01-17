@@ -88,9 +88,9 @@ Install following roles and features
 1. Open **DFS Management**
 2. Right click **Replication** and select **New Replication Group...**
 3. **Replication Group Type**: Select **Multipurpose replication group**
-4. **Replication Group Memebers**: Add 2 servers
+4. **Replication Group Members**: Add 2 servers
 5. **Topology Selection**: Select **Full mesh**
-6. **Replication Group Schedule and Bandwith**: No need to change
+6. **Replication Group Schedule and Bandwidth**: No need to change
 7. ** Primary Member**: Select primary server
 8. **Folders to Replicate**: Select the folder on the striped disk.
 9. **Local Path of test on Other Members**: Select **Enabled** and the same folder on **Edit** page
