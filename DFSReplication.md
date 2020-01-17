@@ -11,7 +11,8 @@ Note: DFS Replication replicates data between servers, but the data is accessibl
 ### System Requirement
 
 - 2 servers are required.
-    - OS is Windows.
+    - OS which DFS Replication is able to work
+    	- Note: OS version is also depending on ECX version which you use.
     - Both servers are members of a same domain.
     - Both servers are IP reachable each other.
 
@@ -114,3 +115,9 @@ Install database application in the folder which is replicated between servers b
 
 ### Add monitor resources for monitoring database to ECX cluster
 
+### Behavior after server's dual activation
+
+The situatioin is that the network between servers is recovered after the network was disconnected once.
+We think the situation that data on a shared folder was rewrited while the network was disconnected.
+
+After recovering the network, regarding each file, the data which has latest timestamp on one server is copied to another server.
