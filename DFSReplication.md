@@ -108,6 +108,8 @@ Install following roles and features
 
 ### Install database application on both nodes
 
+Install database application in the folder which is replicated between servers by DFS Replication.
+
 ### Add resources for starting and stopping database to ECX cluster
 
 ### Add monitor resources for monitoring database to ECX cluster
