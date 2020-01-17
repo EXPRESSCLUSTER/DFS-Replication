@@ -20,6 +20,7 @@ Note: DFS Replication replicates data between servers, but the data is accessibl
 - Windows Server 2016 Standard Edition
     - Install DFS Replication
     - Install EXPRESSCLUSTER X for Windows
+    	- Ping NP resolution resource
         - Failover Group
             - Floating IP address resource
             - Some kind of resource for starting and stopping a database
@@ -37,7 +38,7 @@ Note: DFS Replication replicates data between servers, but the data is accessibl
 		 +--| Primary Server             |
 		 |  | - Windows Server 2016      |
 		 |  | - EXPRESSCLUSTER X 4.1     |
-         |  | - DFS Replication          |
+         	 |  | - DFS Replication          |
 		 |  |                            |
 		 |  | RAM   : 4GB                |
 		 |  | Disk 0: 40GB for OS        |
@@ -50,7 +51,7 @@ Note: DFS Replication replicates data between servers, but the data is accessibl
 		 +--| Secondary Server           |
 		 |  | - Windows Server 2016      |
 		 |  | - EXPRESSCLUSTER X 4.1     |
-         |  | - DFS Replication          |         
+         	 |  | - DFS Replication          |         
 		 |  |                            |
 		 |  | RAM   : 4GB                |
 		 |  | Disk 0: 40GB for OS        |
@@ -99,7 +100,8 @@ Install following roles and features
 1. Install EXPRESSCLUSTER X
 2. Register ECX licenses
     - EXPRESSCLUSTER X for Windows
-3. Create a cluster and a failover group
+3. Create a cluster
+    - Ping NP resolution resource
     - Failover Group: failover
         - fip: floating IP resource
 4. Start a group on primary server
