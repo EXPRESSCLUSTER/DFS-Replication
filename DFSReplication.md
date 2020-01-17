@@ -117,7 +117,8 @@ Install database application in the folder which is replicated between servers b
 
 ### Behavior after server's dual activation
 
-The situatioin is that the network between servers is recovered after the network was disconnected once.
+The situation is that the network between servers is recovered after the network was disconnected once.
+
 We think the situation that data on a shared folder was rewrited while the network was disconnected.
 
 After recovering the network, regarding each file, the data which has latest timestamp on one server is copied to another server.
