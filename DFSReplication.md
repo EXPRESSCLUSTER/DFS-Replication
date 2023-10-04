@@ -122,3 +122,11 @@ The situation is that the network between servers is recovered after the network
 We think the situation that data on a shared folder was rewrited while the network was disconnected.
 
 After recovering the network, regarding each file, the data which has latest timestamp on one server is copied to another server.
+
+## Comparing with ECX Replicator
+- DFS replicates specified "folder" between servers.
+- Replicator replicates specified "drive" between servers.
+- DFS replicates the files on close() operation. Intermediate data before close() operation could be lost on failure.
+- Replicator synchronously replicates "each write operations to the drive" and no-data-loss is guaranteed.
+- The files on DFS are accessible for all the servers simultaneously. Due to the characteristic, applications need to care about exclusive control for distributed accessing to the files on DFS. See [this](https://learn.microsoft.com/en-us/windows-server/storage/dfs-replication/dfsr-faq#when-should-i-not-use-dfs-replication-).
+- The files on Replicator are accessible by active-server only and the standby-server prohibit accessing to them. Applications do not need to worry about such exclusive control.
